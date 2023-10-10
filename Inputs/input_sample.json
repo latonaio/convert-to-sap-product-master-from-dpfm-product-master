@@ -1,0 +1,192 @@
+{
+	"connection_key": "request",
+	"result": true,
+	"redis_key": "abcdefg",
+	"filepath": "/var/lib/aion/Data/rededge_sdc/abcdef.json",
+	"api_status_code": 200,
+	"runtime_session_id": "boi9ar543dg91ipdnspi099u231280ab0v8af0ew",
+	"business_partner": null,
+	"service_label": "FUNCTION_CONVERT_TO_SAP_PRODUCT_MASTER_FROM_DPFM_RRODUCT_MASTER",
+	"api_type": "reads",
+	"ProductMaster": {
+		"Product": "",
+		"ProductType": "",
+		"BaseUnit": "",
+		"ValidityStartDate": "",
+		"ValidityEndDate": "",
+		"ItemCategory": "",
+		"ProductGroup": "",
+		"GrossWeight": null,
+		"WeightUnit": "",
+		"SizeOrDimensionText": "",
+		"IndustryStandardName": "",
+		"ProductStandardID": "",
+		"NetWeight": null,
+		"CountryOfOrigin": "",
+		"CountryOfOriginLanguage": "",
+		"LocalRegionOfOrigin": "",
+		"LocalSubRegionOfOrigin": "",
+		"BarcodeType": "",
+		"ProductAccountAssignmentGroup": "",
+		"CreationDate": "",
+		"LastChangeDate": "",
+		"IsMarkedForDeletion": null
+	},
+	"api_schema": "DPFMProductMasterReads",
+	"accepter": [
+		"General"
+	]
+}
+
+
+{
+	"connection_key": "request",
+	"result": true,
+	"redis_key": "abcdefg",
+	"filepath": "/var/lib/aion/Data/rededge_sdc/abcdef.json",
+	"runtime_session_id": "",
+	"api_status_code": 200,
+	"business_partner": 201,
+	"service_label": "FUNCTION_CONVERT_TO_DPFM_PRODUCT_MASTER_FROM_SAP_PRODUCT_MASTER",
+	"api_type": "function",
+	"Product": {
+		"Product": "",
+		"ProductType": "",
+		"BaseUnit": "",
+		"ValidityStartDate": "",
+		"ProductGroup": "",
+		"GrossWeight": null,
+		"NetWeight": null,
+		"WeightUnit": "",
+		"SizeOrDimensionText": "",
+		"ProductStandardID": "",
+		"IndustryStandardName": "",
+		"ItemCategory": "",
+		"CountryOfOrigin": "",
+		"CountryOfOriginLanguage": "",
+		"BarcodeType": "",
+		"ProductAccountAssignmentGroup": "",
+		"CreationDate": "",
+		"LastChangeDate": "",
+		"IsMarkedForDeletion": null,
+		"BusinessPartner": {
+			"BusinessPartner": null,
+			"ValidityEndDate": "",
+			"ValidityStartDate": "",
+			"BusinessPartnerProduct": "",
+			"IsMarkedForDeletion": null,
+            "Allergen": {
+                "Allergen": "",
+                "AllergenIsContained": ""
+            },
+            "NutritionalInfo": {
+                "Nutrient": "",
+                "NutrientContent": "",
+                "NutrientContentUnit": ""
+            },
+            "Calories": {
+                "CaloryUnitQuantitiy": "",
+                "Calories": "",
+                "CaloryUnit": ""
+            },
+			"BPPlant": {
+				"Plant": "",
+				"AvailabilityCheckType": "",
+				"MRPType": "",
+				"MRPController": "",
+				"ReorderThresholdQuantity": null,
+				"PlanningTimeFence": null,
+				"MRPPlanningCalendar": "",
+				"SafetyStockQuantityInBaseUnit": null,
+				"SafetyDuration": null,
+				"MaximumStockQuantityInBaseUnit": null,
+				"MinumumDeliveryQuantityInBaseUnit": null,
+				"MinumumDeliveryLotSizeQuantityInBaseUnit": null,
+				"StandardDeliveryLotSizeQuantityInBaseUnit": null,
+				"DeliveryLotSizeRoundingQuantityInBaseUnit": null,
+				"MaximumDeliveryLotSizeQuantityInBaseUnit": null,
+				"MaximumDeliveryQuantityInBaseUnit": null,
+				"DeliveryLotSizeIsFixed": null,
+				"StandardDeliveryDurationInDays": null,
+				"IsBatchManagementRequired": null,
+				"BatchManagementPolicy": "",
+				"InventoryUnit": "",
+				"ProfitCenter": "",
+				"IsMarkedForDeletion": null,
+				"StorageLocation": {
+					"StorageLocation": "",
+					"CreationDate": "",
+					"InventoryBlockStatus": null,
+					"IsMarkedForDeletion": null
+				},
+				"MRPArea": {
+					"MRPArea": "",
+					"StorageLocationForMRP": "",
+					"MRPType": "",
+					"MRPController": "",
+					"ReorderThresholdQuantity": null,
+					"PlanningTimeFence": null,
+					"MRPPlanningCalendar": "",
+					"SafetyStockQuantityInBaseUnit": null,
+					"SafetyDuration": null,
+					"MaximumStockQuantityInBaseUnit": null,
+					"MinumumDeliveryQuantityInBaseUnit": null,
+					"MinumumDeliveryLotSizeQuantityInBaseUnit": null,
+					"StandardDeliveryLotSizeQuantityInBaseUnit": null,
+					"DeliveryLotSizeRoundingQuantityInBaseUnit": null,
+					"MaximumDeliveryLotSizeQuantityInBaseUnit": null,
+					"MaximumDeliveryQuantityInBaseUnit": null,
+					"DeliveryLotSizeIsFixed": null,
+					"StandardDeliveryDurationInDays": null,
+					"IsMarkedForDeletion": null
+				},
+				"WorkScheduling": {
+					"ProductionInvtryManagedLoc": "",
+					"ProductProcessingTime": null,
+					"ProductionSupervisor": "",
+					"ProductProductionQuantityUnit": "",
+					"ProdnOrderIsBatchRequired": null,
+					"PDTCompIsMarkedForBackflush": null,
+					"ProductionSchedulingProfile": "",
+					"IsMarkedForDeletion": null
+				},
+				"Accounting": {
+					"ValuationClass": "",
+					"CostingPolicy": "",
+					"PriceUnitQty": "",
+					"StandardPrice": "",
+					"MovingAveragePrice": "",
+					"PriceLastChangeDate": "",
+					"PlannedPrice": "",
+					"IsMarkedForDeletion": null
+				}
+			}
+		},
+		"ProductDescription": {
+			"Language": "",
+			"ProductDescription": ""
+		},
+		"ProductDescriptionByBusinessPartner": {
+			"BusinessPartner": null,
+			"Language": "",
+			"ProductDescription": ""
+		},
+		"Tax": {
+			"Country": "",
+			"ProductTaxCategory": "",
+			"ProductTaxClassification": ""
+		}
+	},
+	"api_schema": "FunctionConvertToSAPProductMasterFromDPFMProductMaster",
+	"accepter": [
+		"General"
+	],
+	"sql_update_result": true,
+	"sql_update_error": "",
+	"subfunc_result": null,
+	"subfunc_error": "",
+	"exconf_result": true,
+	"exconf_error": "",
+	"api_processing_result": true,
+	"api_processing_error": ""
+}

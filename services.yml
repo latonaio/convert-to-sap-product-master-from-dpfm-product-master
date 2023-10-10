@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: convert-to-sap-product-master-from-dpfm-product-master
+  name: convert-to-sap-product-master-from-dpfm-product-master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: convert-to-sap-product-master-from-dpfm-product-master
+      app: FUNCTION_CONVERT_TO_SAP_PRODUCT_MASTER_FROM_DPFM_RRODUCT_MASTER
+  template:
+    metadata:
+      labels:
+        run: convert-to-sap-product-master-from-dpfm-product-master
+        app: FUNCTION_CONVERT_TO_SAP_PRODUCT_MASTER_FROM_DPFM_RRODUCT_MASTER
+    spec:
+      hostname: convert-to-sap-product-master-from-dpfm-product-master
+      containers:
+        - name: convert-to-sap-product-master-from-dpfm-product-master
+          image: latonaio/convert-to-sap-product-master-from-dpfm-product-master
+          imagePullPolicy: Always
+          env:
+            - name: "RMQ_QUEUE_FROM"
+              value: "convert-to-sap-product-master-from-dpfm-product-master-queue-from"
+            - name: "RMQ_QUEUE_TO_SQL"
+              value: "sql-update-kube"
+            - name: "RMQ_QUEUE_TO_EX_CONF"
+              value: ""
+            - name: "RMQ_QUEUE_TO_HEADERS_SUB_FUNC"
+              value: ""
+            - name: "RMQ_QUEUE_TO_ITEMS_SUB_FUNC"
+              value: ""
+            - name: "RMQ_SESSION_CONTROL_QUEUE"
+              value: "convert-to-sap-product-master-from-dpfm-product-master-session-control-queue"
+            - name: "DB_NAME"
+              value: "DataPlatformMastersAndTransactionsMysqlKube"
+          envFrom:
+            - configMapRef:
+                name: env-config
+            - secretRef:
+                name: env-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: convert-to-sap-product-master-from-dpfm-product-master
+  name: convert-to-sap-product-master-from-dpfm-product-master
+spec:
+  selector:
+    run: convert-to-sap-product-master-from-dpfm-product-master
+  type: NodePort
+  ports:
+    - name: api
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+      nodePort: 30748
